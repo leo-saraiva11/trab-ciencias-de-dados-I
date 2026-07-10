@@ -10,9 +10,7 @@ Professora: Elaine Ribeiro Faria
 <strong>Grupo:</strong><br>
 Leonardo Rodrigues Oliveira Saraiva — 12321BSI284<br>
 Murilo de Melo Barbosa Santos — 12321BSI245<br>
-Vitor Costa Andrade — 12321BSI255<br>
-<br>
-Repositório: https://github.com/leo-saraiva11/trab-ciencias-de-dados-I
+Vitor Costa Andrade — 12321BSI255
 </div>
 
 ## 1. Introdução e objetivos
@@ -287,4 +285,3 @@ a apresentação.
 - Base 1 — Credit Card Transactions (IBM): https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions
 - Base 2 — Heart Failure Prediction: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
 - scikit-learn — Pedregosa et al., *Scikit-learn: Machine Learning in Python*, JMLR 12, 2011. https://scikit-learn.org
-- Repositório do trabalho: https://github.com/leo-saraiva11/trab-ciencias-de-dados-I
