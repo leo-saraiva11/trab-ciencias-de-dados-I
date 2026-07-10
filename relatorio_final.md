@@ -266,7 +266,7 @@ melhor valor de cada base.
 
 Declaração conforme o item 2.e do enunciado.
 
-**LLM utilizada:** Claude (modelo Opus 4.x), por meio da ferramenta **Claude Code**.
+**LLM utilizada:** Claude (modelo Opus 4.8), por meio da ferramenta **Claude Code**.
 
 | Etapa | Uso da LLM | Prompt (resumo) |
 |-------|-----------|-----------------|
