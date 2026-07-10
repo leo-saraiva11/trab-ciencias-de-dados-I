@@ -8,9 +8,10 @@
 > sendo preenchido conforme o trabalho avança. Ao final, vira a base para gerar
 > o PDF de entrega.
 
-**Cabeçalho da entrega (preencher):**
-- Nome: `<preencher>` — Matrícula: `<preencher>`
-- Nome: `<preencher>` — Matrícula: `<preencher>`
+**Cabeçalho da entrega:**
+- Leonardo Rodrigues Oliveira Saraiva — 12321BSI284
+- Murilo de Melo Barbosa Santos — 12321BSI245
+- Vitor Costa Andrade — 12321BSI255
 
 ---
 

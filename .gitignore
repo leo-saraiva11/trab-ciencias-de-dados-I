@@ -1,9 +1,12 @@
 # === Dados brutos (baixados do Kaggle — ver README / baixar_dados.py) ===
 datasets/
 
-# === Artefatos derivados grandes (regeráveis com os scripts) ===
-processed/*.parquet
-processed/*.pkl
+# === processed/ é leve (~4.7 MB) e vai para o repo, para o grupo rodar
+#     treinar.py sem precisar baixar os dados brutos. Apenas o datasets/
+#     bruto (acima) fica de fora por ser grande demais. ===
+
+# HTML intermediário do relatório (o .md e o .pdf vão para o repo)
+relatorio_final.html
 
 # === Credenciais — NUNCA versionar ===
 kaggle.json

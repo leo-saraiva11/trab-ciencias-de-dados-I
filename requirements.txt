@@ -5,3 +5,5 @@ scikit-learn==1.6.1
 numpy==2.0.2
 PyYAML==6.0.3
 kaggle
+markdown==3.9
+
