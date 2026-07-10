@@ -1,0 +1,819 @@
+{
+  "arquivo": "datasets/ibm_fraud/credit_card_transactions-ibm_v2.parquet",
+  "n_linhas": 24386900,
+  "n_colunas": 15,
+  "colunas": [
+    {
+      "coluna": "User",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 2000,
+      "pct_distintos": 0.0082,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "486",
+      "moda_freq": 82355,
+      "moda_pct": 0.3377,
+      "min": 0.0,
+      "max": 1999.0,
+      "amplitude": 1999.0,
+      "media": 1001.0193350938414,
+      "desvio_padrao": 569.4611570323665,
+      "coef_variacao": 0.5689,
+      "percentis": {
+        "p1": 17.0,
+        "p5": 97.0,
+        "p25": 510.0,
+        "p50": 1006.0,
+        "p75": 1477.0,
+        "p95": 1893.0,
+        "p99": 1978.0
+      },
+      "mediana": 1006.0,
+      "iqr": 967.0,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": -940.5,
+        "superior": 2927.5
+      },
+      "assimetria": -0.022233203141779054,
+      "curtose": -1.1482960298560656,
+      "n_zeros": 19963,
+      "pct_zeros": 0.0819,
+      "n_negativos": 0,
+      "flags": []
+    },
+    {
+      "coluna": "Card",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 9,
+      "pct_distintos": 0.0,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "0",
+      "moda_freq": 8696411,
+      "moda_pct": 35.6602,
+      "categorias": [
+        {
+          "valor": "0",
+          "n": 8696411,
+          "pct": 35.66
+        },
+        {
+          "valor": "1",
+          "n": 6493597,
+          "pct": 26.63
+        },
+        {
+          "valor": "2",
+          "n": 4305594,
+          "pct": 17.66
+        },
+        {
+          "valor": "3",
+          "n": 2790785,
+          "pct": 11.44
+        },
+        {
+          "valor": "4",
+          "n": 1309120,
+          "pct": 5.37
+        },
+        {
+          "valor": "5",
+          "n": 563097,
+          "pct": 2.31
+        },
+        {
+          "valor": "6",
+          "n": 176729,
+          "pct": 0.72
+        },
+        {
+          "valor": "7",
+          "n": 46383,
+          "pct": 0.19
+        },
+        {
+          "valor": "8",
+          "n": 5184,
+          "pct": 0.02
+        }
+      ],
+      "min": 0.0,
+      "max": 8.0,
+      "amplitude": 8.0,
+      "media": 1.351366184303868,
+      "desvio_padrao": 1.4071536259341453,
+      "coef_variacao": 1.0413,
+      "percentis": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 2.0,
+        "p95": 4.0,
+        "p99": 5.0
+      },
+      "mediana": 1.0,
+      "iqr": 2.0,
+      "outliers_iqr": 228296,
+      "pct_outliers": 0.9361,
+      "limites_outlier": {
+        "inferior": -3.0,
+        "superior": 5.0
+      },
+      "assimetria": 1.0485800319644907,
+      "curtose": 0.7084540033905662,
+      "n_zeros": 8696411,
+      "pct_zeros": 35.6602,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "Year",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 30,
+      "pct_distintos": 0.0001,
+      "nivel_cardinalidade": "media",
+      "candidata_categorica": true,
+      "moda": "2019",
+      "moda_freq": 1723938,
+      "moda_pct": 7.0691,
+      "min": 1991.0,
+      "max": 2020.0,
+      "amplitude": 29.0,
+      "media": 2011.9551699067943,
+      "desvio_padrao": 5.105920688922399,
+      "coef_variacao": 0.0025,
+      "percentis": {
+        "p1": 1999.0,
+        "p5": 2003.0,
+        "p25": 2008.0,
+        "p50": 2013.0,
+        "p75": 2016.0,
+        "p95": 2019.0,
+        "p99": 2020.0
+      },
+      "mediana": 2013.0,
+      "iqr": 8.0,
+      "outliers_iqr": 50341,
+      "pct_outliers": 0.2064,
+      "limites_outlier": {
+        "inferior": 1996.0,
+        "superior": 2028.0
+      },
+      "assimetria": -0.5601710829865854,
+      "curtose": -0.29658097391112426,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_media"
+      ]
+    },
+    {
+      "coluna": "Month",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 12,
+      "pct_distintos": 0.0,
+      "nivel_cardinalidade": "media",
+      "candidata_categorica": true,
+      "moda": "1",
+      "moda_freq": 2142220,
+      "moda_pct": 8.7843,
+      "categorias": [
+        {
+          "valor": "1",
+          "n": 2142220,
+          "pct": 8.78
+        },
+        {
+          "valor": "12",
+          "n": 2104435,
+          "pct": 8.63
+        },
+        {
+          "valor": "10",
+          "n": 2075188,
+          "pct": 8.51
+        },
+        {
+          "valor": "8",
+          "n": 2070407,
+          "pct": 8.49
+        },
+        {
+          "valor": "7",
+          "n": 2051785,
+          "pct": 8.41
+        },
+        {
+          "valor": "11",
+          "n": 2026832,
+          "pct": 8.31
+        },
+        {
+          "valor": "5",
+          "n": 2023412,
+          "pct": 8.3
+        },
+        {
+          "valor": "9",
+          "n": 2006307,
+          "pct": 8.23
+        },
+        {
+          "valor": "3",
+          "n": 2002867,
+          "pct": 8.21
+        },
+        {
+          "valor": "6",
+          "n": 1981230,
+          "pct": 8.12
+        },
+        {
+          "valor": "2",
+          "n": 1960411,
+          "pct": 8.04
+        },
+        {
+          "valor": "4",
+          "n": 1941806,
+          "pct": 7.96
+        }
+      ],
+      "min": 1.0,
+      "max": 12.0,
+      "amplitude": 11.0,
+      "media": 6.52506357921671,
+      "desvio_padrao": 3.472354834572925,
+      "coef_variacao": 0.5322,
+      "percentis": {
+        "p1": 1.0,
+        "p5": 1.0,
+        "p25": 3.0,
+        "p50": 7.0,
+        "p75": 10.0,
+        "p95": 12.0,
+        "p99": 12.0
+      },
+      "mediana": 7.0,
+      "iqr": 7.0,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": -7.5,
+        "superior": 20.5
+      },
+      "assimetria": -0.017695498030522026,
+      "curtose": -1.2205059041970698,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_media"
+      ]
+    },
+    {
+      "coluna": "Day",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 31,
+      "pct_distintos": 0.0001,
+      "nivel_cardinalidade": "media",
+      "candidata_categorica": true,
+      "moda": "21",
+      "moda_freq": 813404,
+      "moda_pct": 3.3354,
+      "min": 1.0,
+      "max": 31.0,
+      "amplitude": 30.0,
+      "media": 15.718122721625134,
+      "desvio_padrao": 8.794073288462602,
+      "coef_variacao": 0.5595,
+      "percentis": {
+        "p1": 1.0,
+        "p5": 2.0,
+        "p25": 8.0,
+        "p50": 16.0,
+        "p75": 23.0,
+        "p95": 29.0,
+        "p99": 31.0
+      },
+      "mediana": 16.0,
+      "iqr": 15.0,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": -14.5,
+        "superior": 45.5
+      },
+      "assimetria": 0.006571444580354893,
+      "curtose": -1.1927322652278987,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_media"
+      ]
+    },
+    {
+      "coluna": "Time",
+      "tipo_fisico": "TIME",
+      "tipo_logico": "temporal",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 1440,
+      "pct_distintos": 0.0059,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "12:31:00",
+      "moda_freq": 30604,
+      "moda_pct": 0.1255,
+      "min": "00:00:00",
+      "max": "23:59:00",
+      "flags": []
+    },
+    {
+      "coluna": "Amount",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 98953,
+      "pct_distintos": 0.4058,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "$80.00",
+      "moda_freq": 250984,
+      "moda_pct": 1.0292,
+      "comprimento": {
+        "min": 5.0,
+        "max": 9.0,
+        "media": 5.965761494900951,
+        "desvio_padrao": 0.6363472197316128
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 24386900,
+      "pct_aparencia_numerica": 100.0,
+      "flags": [
+        "texto_numerico"
+      ]
+    },
+    {
+      "coluna": "Use Chip",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 3,
+      "pct_distintos": 0.0,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "Swipe Transaction",
+      "moda_freq": 15386082,
+      "moda_pct": 63.0916,
+      "categorias": [
+        {
+          "valor": "Swipe Transaction",
+          "n": 15386082,
+          "pct": 63.09
+        },
+        {
+          "valor": "Chip Transaction",
+          "n": 6287598,
+          "pct": 25.78
+        },
+        {
+          "valor": "Online Transaction",
+          "n": 2713220,
+          "pct": 11.13
+        }
+      ],
+      "comprimento": {
+        "min": 16.0,
+        "max": 18.0,
+        "media": 16.853430407308842,
+        "desvio_padrao": 0.589577397961868
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "Merchant Name",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 100343,
+      "pct_distintos": 0.4115,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "1799189980464955940",
+      "moda_freq": 1130230,
+      "moda_pct": 4.6346,
+      "min": -9.222899435637404e+18,
+      "max": 9.223291803303718e+18,
+      "amplitude": 1.8446191238941123e+19,
+      "media": -4.769229627719946e+17,
+      "desvio_padrao": 4.758939870684041e+18,
+      "coef_variacao": -9.9784,
+      "percentis": {
+        "p1": -8.821071778930381e+18,
+        "p5": -7.146670748125201e+18,
+        "p25": -4.5005429364150124e+18,
+        "p50": -7.946764951185516e+17,
+        "p75": 3.189517333335617e+18,
+        "p95": 7.461959004246117e+18,
+        "p99": 8.919682822789039e+18
+      },
+      "mediana": -7.946764951185516e+17,
+      "iqr": 7.690060269750629e+18,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": -1.6035633341040957e+19,
+        "superior": 1.4724607737961562e+19
+      },
+      "assimetria": 0.2043050337596098,
+      "curtose": -1.059114086486171,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 12990428,
+      "flags": []
+    },
+    {
+      "coluna": "Merchant City",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 13429,
+      "pct_distintos": 0.0551,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": true,
+      "moda": "ONLINE",
+      "moda_freq": 2720821,
+      "moda_pct": 11.1569,
+      "comprimento": {
+        "min": 3.0,
+        "max": 26.0,
+        "media": 8.581160787143917,
+        "desvio_padrao": 2.7443482623281312
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_alta"
+      ]
+    },
+    {
+      "coluna": "Merchant State",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 24386900,
+      "n_preenchidos": 21666079,
+      "n_ausentes": 2720821,
+      "pct_ausentes": 11.1569,
+      "n_distintos": 223,
+      "pct_distintos": 0.001,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": true,
+      "moda": "CA",
+      "moda_freq": 2591830,
+      "moda_pct": 11.9626,
+      "comprimento": {
+        "min": 2.0,
+        "max": 32.0,
+        "media": 2.037614374063715,
+        "desvio_padrao": 0.5043417190339494
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_alta"
+      ]
+    },
+    {
+      "coluna": "Zip",
+      "tipo_fisico": "DOUBLE",
+      "tipo_logico": "decimal",
+      "n_total": 24386900,
+      "n_preenchidos": 21508765,
+      "n_ausentes": 2878135,
+      "pct_ausentes": 11.802,
+      "n_distintos": 27321,
+      "pct_distintos": 0.127,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "98516.0",
+      "moda_freq": 55679,
+      "moda_pct": 0.2589,
+      "min": 501.0,
+      "max": 99928.0,
+      "amplitude": 99427.0,
+      "media": 50956.44211506332,
+      "desvio_padrao": 29397.065949063533,
+      "coef_variacao": 0.5769,
+      "percentis": {
+        "p1": 2110.0,
+        "p5": 7202.0,
+        "p25": 28374.0,
+        "p50": 46742.0,
+        "p75": 77564.0,
+        "p95": 95670.0,
+        "p99": 98404.0
+      },
+      "mediana": 46742.0,
+      "iqr": 49190.0,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": -45411.0,
+        "superior": 151349.0
+      },
+      "assimetria": 0.1030228013410309,
+      "curtose": -1.26746952262287,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": []
+    },
+    {
+      "coluna": "MCC",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 109,
+      "pct_distintos": 0.0004,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "5411",
+      "moda_freq": 2860738,
+      "moda_pct": 11.7306,
+      "min": 1711.0,
+      "max": 9402.0,
+      "amplitude": 7691.0,
+      "media": 5561.171253336833,
+      "desvio_padrao": 879.3154327182787,
+      "coef_variacao": 0.1581,
+      "percentis": {
+        "p1": 3596.0,
+        "p5": 4121.0,
+        "p25": 5300.0,
+        "p50": 5499.0,
+        "p75": 5812.0,
+        "p95": 7538.0,
+        "p99": 8049.0
+      },
+      "mediana": 5499.0,
+      "iqr": 512.0,
+      "outliers_iqr": 4059356,
+      "pct_outliers": 16.6456,
+      "limites_outlier": {
+        "inferior": 4532.0,
+        "superior": 6580.0
+      },
+      "assimetria": 1.185159797932747,
+      "curtose": 3.5368277870413327,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": []
+    },
+    {
+      "coluna": "Errors?",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 24386900,
+      "n_preenchidos": 388431,
+      "n_ausentes": 23998469,
+      "pct_ausentes": 98.4072,
+      "n_distintos": 23,
+      "pct_distintos": 0.0059,
+      "nivel_cardinalidade": "media",
+      "candidata_categorica": true,
+      "moda": "Insufficient Balance",
+      "moda_freq": 242783,
+      "moda_pct": 62.5035,
+      "categorias": [
+        {
+          "valor": "Insufficient Balance",
+          "n": 242783,
+          "pct": 62.5
+        },
+        {
+          "valor": "Bad PIN",
+          "n": 58918,
+          "pct": 15.17
+        },
+        {
+          "valor": "Technical Glitch",
+          "n": 48157,
+          "pct": 12.4
+        },
+        {
+          "valor": "Bad Card Number",
+          "n": 13321,
+          "pct": 3.43
+        },
+        {
+          "valor": "Bad CVV",
+          "n": 10740,
+          "pct": 2.76
+        },
+        {
+          "valor": "Bad Expiration",
+          "n": 10716,
+          "pct": 2.76
+        },
+        {
+          "valor": "Bad Zipcode",
+          "n": 2079,
+          "pct": 0.54
+        },
+        {
+          "valor": "Bad PIN,Insufficient Balance",
+          "n": 581,
+          "pct": 0.15
+        },
+        {
+          "valor": "Insufficient Balance,Technical Glitch",
+          "n": 457,
+          "pct": 0.12
+        },
+        {
+          "valor": "Bad PIN,Technical Glitch",
+          "n": 128,
+          "pct": 0.03
+        },
+        {
+          "valor": "Bad Card Number,Insufficient Balance",
+          "n": 122,
+          "pct": 0.03
+        },
+        {
+          "valor": "Bad CVV,Insufficient Balance",
+          "n": 89,
+          "pct": 0.02
+        },
+        {
+          "valor": "Bad Expiration,Insufficient Balance",
+          "n": 78,
+          "pct": 0.02
+        },
+        {
+          "valor": "Bad Card Number,Bad CVV",
+          "n": 60,
+          "pct": 0.02
+        },
+        {
+          "valor": "Bad Card Number,Bad Expiration",
+          "n": 54,
+          "pct": 0.01
+        },
+        {
+          "valor": "Bad Expiration,Bad CVV",
+          "n": 47,
+          "pct": 0.01
+        },
+        {
+          "valor": "Bad Expiration,Technical Glitch",
+          "n": 32,
+          "pct": 0.01
+        },
+        {
+          "valor": "Bad Card Number,Technical Glitch",
+          "n": 25,
+          "pct": 0.01
+        },
+        {
+          "valor": "Bad CVV,Technical Glitch",
+          "n": 21,
+          "pct": 0.01
+        },
+        {
+          "valor": "Bad Zipcode,Insufficient Balance",
+          "n": 13,
+          "pct": 0.0
+        },
+        {
+          "valor": "Bad Zipcode,Technical Glitch",
+          "n": 7,
+          "pct": 0.0
+        },
+        {
+          "valor": "Bad Card Number,Bad Expiration,Insufficient Balance",
+          "n": 2,
+          "pct": 0.0
+        },
+        {
+          "valor": "Bad Card Number,Bad Expiration,Technical Glitch",
+          "n": 1,
+          "pct": 0.0
+        }
+      ],
+      "comprimento": {
+        "min": 7.0,
+        "max": 51.0,
+        "media": 16.835525485864927,
+        "desvio_padrao": 5.019052138826223
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "muitos_ausentes",
+        "categorica_card_media"
+      ]
+    },
+    {
+      "coluna": "Is Fraud?",
+      "tipo_fisico": "BOOLEAN",
+      "tipo_logico": "boolean",
+      "n_total": 24386900,
+      "n_preenchidos": 24386900,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 2,
+      "pct_distintos": 0.0,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "False",
+      "moda_freq": 24357143,
+      "moda_pct": 99.878,
+      "categorias": [
+        {
+          "valor": "False",
+          "n": 24357143,
+          "pct": 99.88
+        },
+        {
+          "valor": "True",
+          "n": 29757,
+          "pct": 0.12
+        }
+      ],
+      "n_true": 29757,
+      "n_false": 24357143,
+      "pct_true": 0.122,
+      "pct_false": 99.878,
+      "razao_desbalanceamento": 818.53,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# === Dados brutos (baixados do Kaggle — ver README / baixar_dados.py) ===
+datasets/
+
+# === Artefatos derivados grandes (regeráveis com os scripts) ===
+processed/*.parquet
+processed/*.pkl
+
+# === Credenciais — NUNCA versionar ===
+kaggle.json
+.kaggle/
+*.env
+.env
+
+# === Python ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# === Sistema ===
+.DS_Store
+Thumbs.db

@@ -1,0 +1,577 @@
+{
+  "arquivo": "datasets/heart/heart_failure.parquet",
+  "n_linhas": 918,
+  "n_colunas": 12,
+  "colunas": [
+    {
+      "coluna": "Age",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 50,
+      "pct_distintos": 5.4466,
+      "nivel_cardinalidade": "media",
+      "candidata_categorica": true,
+      "moda": "54",
+      "moda_freq": 51,
+      "moda_pct": 5.5556,
+      "min": 28.0,
+      "max": 77.0,
+      "amplitude": 49.0,
+      "media": 53.510893246187365,
+      "desvio_padrao": 9.43261650673202,
+      "coef_variacao": 0.1763,
+      "percentis": {
+        "p1": 32.0,
+        "p5": 37.0,
+        "p25": 47.0,
+        "p50": 54.0,
+        "p75": 60.0,
+        "p95": 68.0,
+        "p99": 74.0
+      },
+      "mediana": 54.0,
+      "iqr": 13.0,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": 27.5,
+        "superior": 79.5
+      },
+      "assimetria": -0.19593302867563078,
+      "curtose": -0.3861396123867395,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_media"
+      ]
+    },
+    {
+      "coluna": "Sex",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 2,
+      "pct_distintos": 0.2179,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "M",
+      "moda_freq": 725,
+      "moda_pct": 78.976,
+      "categorias": [
+        {
+          "valor": "M",
+          "n": 725,
+          "pct": 78.98
+        },
+        {
+          "valor": "F",
+          "n": 193,
+          "pct": 21.02
+        }
+      ],
+      "comprimento": {
+        "min": 1.0,
+        "max": 1.0,
+        "media": 1.0,
+        "desvio_padrao": 0.0
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "ChestPainType",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 4,
+      "pct_distintos": 0.4357,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "ASY",
+      "moda_freq": 496,
+      "moda_pct": 54.0305,
+      "categorias": [
+        {
+          "valor": "ASY",
+          "n": 496,
+          "pct": 54.03
+        },
+        {
+          "valor": "NAP",
+          "n": 203,
+          "pct": 22.11
+        },
+        {
+          "valor": "ATA",
+          "n": 173,
+          "pct": 18.85
+        },
+        {
+          "valor": "TA",
+          "n": 46,
+          "pct": 5.01
+        }
+      ],
+      "comprimento": {
+        "min": 2.0,
+        "max": 3.0,
+        "media": 2.9498910675381262,
+        "desvio_padrao": 0.21828864742618032
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "RestingBP",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 67,
+      "pct_distintos": 7.2985,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "120",
+      "moda_freq": 132,
+      "moda_pct": 14.3791,
+      "min": 0.0,
+      "max": 200.0,
+      "amplitude": 200.0,
+      "media": 132.39651416122004,
+      "desvio_padrao": 18.514154119907804,
+      "coef_variacao": 0.1398,
+      "percentis": {
+        "p1": 95.0,
+        "p5": 106.0,
+        "p25": 120.0,
+        "p50": 130.0,
+        "p75": 140.0,
+        "p95": 160.0,
+        "p99": 180.0
+      },
+      "mediana": 130.0,
+      "iqr": 20.0,
+      "outliers_iqr": 28,
+      "pct_outliers": 3.0501,
+      "limites_outlier": {
+        "inferior": 90.0,
+        "superior": 170.0
+      },
+      "assimetria": 0.1798393100516949,
+      "curtose": 3.271250916829053,
+      "n_zeros": 1,
+      "pct_zeros": 0.1089,
+      "n_negativos": 0,
+      "flags": []
+    },
+    {
+      "coluna": "Cholesterol",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 222,
+      "pct_distintos": 24.183,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "0",
+      "moda_freq": 172,
+      "moda_pct": 18.7364,
+      "min": 0.0,
+      "max": 603.0,
+      "amplitude": 603.0,
+      "media": 198.7995642701525,
+      "desvio_padrao": 109.38414455220345,
+      "coef_variacao": 0.5502,
+      "percentis": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p25": 173.25,
+        "p50": 223.0,
+        "p75": 267.0,
+        "p95": 331.29999999999995,
+        "p99": 411.4900000000001
+      },
+      "mediana": 223.0,
+      "iqr": 93.75,
+      "outliers_iqr": 183,
+      "pct_outliers": 19.9346,
+      "limites_outlier": {
+        "inferior": 32.625,
+        "superior": 407.625
+      },
+      "assimetria": -0.6100864307268191,
+      "curtose": 0.11820846851765433,
+      "n_zeros": 172,
+      "pct_zeros": 18.7364,
+      "n_negativos": 0,
+      "flags": []
+    },
+    {
+      "coluna": "FastingBS",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 2,
+      "pct_distintos": 0.2179,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "0",
+      "moda_freq": 704,
+      "moda_pct": 76.6885,
+      "categorias": [
+        {
+          "valor": "0",
+          "n": 704,
+          "pct": 76.69
+        },
+        {
+          "valor": "1",
+          "n": 214,
+          "pct": 23.31
+        }
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "amplitude": 1.0,
+      "media": 0.23311546840958605,
+      "desvio_padrao": 0.42304562473930296,
+      "coef_variacao": 1.8147,
+      "percentis": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "p99": 1.0
+      },
+      "mediana": 0.0,
+      "iqr": 0.0,
+      "outliers_iqr": 214,
+      "pct_outliers": 23.3115,
+      "limites_outlier": {
+        "inferior": 0.0,
+        "superior": 0.0
+      },
+      "assimetria": 1.2644841750727027,
+      "curtose": -0.4019602551746611,
+      "n_zeros": 704,
+      "pct_zeros": 76.6885,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "RestingECG",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 3,
+      "pct_distintos": 0.3268,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "Normal",
+      "moda_freq": 552,
+      "moda_pct": 60.1307,
+      "categorias": [
+        {
+          "valor": "Normal",
+          "n": 552,
+          "pct": 60.13
+        },
+        {
+          "valor": "LVH",
+          "n": 188,
+          "pct": 20.48
+        },
+        {
+          "valor": "ST",
+          "n": 178,
+          "pct": 19.39
+        }
+      ],
+      "comprimento": {
+        "min": 2.0,
+        "max": 6.0,
+        "media": 4.610021786492375,
+        "desvio_padrao": 1.736888191105461
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "MaxHR",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 119,
+      "pct_distintos": 12.963,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "150",
+      "moda_freq": 43,
+      "moda_pct": 4.6841,
+      "min": 60.0,
+      "max": 202.0,
+      "amplitude": 142.0,
+      "media": 136.80936819172112,
+      "desvio_padrao": 25.46033413825029,
+      "coef_variacao": 0.1861,
+      "percentis": {
+        "p1": 77.17,
+        "p5": 96.0,
+        "p25": 120.0,
+        "p50": 138.0,
+        "p75": 156.0,
+        "p95": 178.0,
+        "p99": 186.0
+      },
+      "mediana": 138.0,
+      "iqr": 36.0,
+      "outliers_iqr": 2,
+      "pct_outliers": 0.2179,
+      "limites_outlier": {
+        "inferior": 66.0,
+        "superior": 210.0
+      },
+      "assimetria": -0.14435941846176356,
+      "curtose": -0.44824781995256807,
+      "n_zeros": 0,
+      "pct_zeros": 0.0,
+      "n_negativos": 0,
+      "flags": []
+    },
+    {
+      "coluna": "ExerciseAngina",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 2,
+      "pct_distintos": 0.2179,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "N",
+      "moda_freq": 547,
+      "moda_pct": 59.5861,
+      "categorias": [
+        {
+          "valor": "N",
+          "n": 547,
+          "pct": 59.59
+        },
+        {
+          "valor": "Y",
+          "n": 371,
+          "pct": 40.41
+        }
+      ],
+      "comprimento": {
+        "min": 1.0,
+        "max": 1.0,
+        "media": 1.0,
+        "desvio_padrao": 0.0
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "Oldpeak",
+      "tipo_fisico": "DOUBLE",
+      "tipo_logico": "decimal",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 53,
+      "pct_distintos": 5.7734,
+      "nivel_cardinalidade": "alta",
+      "candidata_categorica": false,
+      "moda": "0.0",
+      "moda_freq": 368,
+      "moda_pct": 40.0871,
+      "min": -2.6,
+      "max": 6.2,
+      "amplitude": 8.8,
+      "media": 0.8873638344226581,
+      "desvio_padrao": 1.0665701510493264,
+      "coef_variacao": 1.202,
+      "percentis": {
+        "p1": -0.5,
+        "p5": 0.0,
+        "p25": 0.0,
+        "p50": 0.6,
+        "p75": 1.5,
+        "p95": 3.0,
+        "p99": 4.0
+      },
+      "mediana": 0.6,
+      "iqr": 1.5,
+      "outliers_iqr": 16,
+      "pct_outliers": 1.7429,
+      "limites_outlier": {
+        "inferior": -2.25,
+        "superior": 3.75
+      },
+      "assimetria": 1.022872021810756,
+      "curtose": 1.2030636840120015,
+      "n_zeros": 368,
+      "pct_zeros": 40.0871,
+      "n_negativos": 13,
+      "flags": []
+    },
+    {
+      "coluna": "ST_Slope",
+      "tipo_fisico": "VARCHAR",
+      "tipo_logico": "texto",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 3,
+      "pct_distintos": 0.3268,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "Flat",
+      "moda_freq": 460,
+      "moda_pct": 50.1089,
+      "categorias": [
+        {
+          "valor": "Flat",
+          "n": 460,
+          "pct": 50.11
+        },
+        {
+          "valor": "Up",
+          "n": 395,
+          "pct": 43.03
+        },
+        {
+          "valor": "Down",
+          "n": 63,
+          "pct": 6.86
+        }
+      ],
+      "comprimento": {
+        "min": 2.0,
+        "max": 4.0,
+        "media": 3.139433551198257,
+        "desvio_padrao": 0.9907712126958955
+      },
+      "n_vazias": 0,
+      "pct_vazias": 0.0,
+      "n_aparencia_numerica": 0,
+      "pct_aparencia_numerica": 0.0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    },
+    {
+      "coluna": "HeartDisease",
+      "tipo_fisico": "BIGINT",
+      "tipo_logico": "inteiro",
+      "n_total": 918,
+      "n_preenchidos": 918,
+      "n_ausentes": 0,
+      "pct_ausentes": 0.0,
+      "n_distintos": 2,
+      "pct_distintos": 0.2179,
+      "nivel_cardinalidade": "baixa",
+      "candidata_categorica": true,
+      "moda": "1",
+      "moda_freq": 508,
+      "moda_pct": 55.3377,
+      "categorias": [
+        {
+          "valor": "1",
+          "n": 508,
+          "pct": 55.34
+        },
+        {
+          "valor": "0",
+          "n": 410,
+          "pct": 44.66
+        }
+      ],
+      "min": 0.0,
+      "max": 1.0,
+      "amplitude": 1.0,
+      "media": 0.5533769063180828,
+      "desvio_padrao": 0.49741373828459706,
+      "coef_variacao": 0.8989,
+      "percentis": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "p99": 1.0
+      },
+      "mediana": 1.0,
+      "iqr": 1.0,
+      "outliers_iqr": 0,
+      "pct_outliers": 0.0,
+      "limites_outlier": {
+        "inferior": -1.5,
+        "superior": 2.5
+      },
+      "assimetria": -0.2150863382508868,
+      "curtose": -1.958008442532968,
+      "n_zeros": 410,
+      "pct_zeros": 44.6623,
+      "n_negativos": 0,
+      "flags": [
+        "categorica_card_baixa"
+      ]
+    }
+  ]
+}

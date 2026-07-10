@@ -1,0 +1,99 @@
+# =====================================================================
+# Configuração de PRÉ-PROCESSAMENTO — Etapa (c)
+# Um perfil por algoritmo: KNN, Árvore de Decisão e MLP.
+# Consumido por: preprocessar.py
+#
+# Opções configuráveis:
+#   ausentes.numericos:   media | mediana | constante | remover_coluna | remover_linhas
+#   ausentes.categoricos: moda  | constante | remover_coluna | remover_linhas
+#   normalizacao:         zscore | minmax | robust | nenhuma
+#   encoding:             onehot | ordinal | frequency | target | nenhuma
+# =====================================================================
+
+# Divisão treino/teste. Os transformadores (imputação, normalização, encoding)
+# são AJUSTADOS SOMENTE NO TREINO e aplicados ao teste -> evita data leakage.
+split:
+  test_size: 0.30          # 30% para teste
+  estratificado: true      # preserva a proporção da classe em treino e teste
+  random_state: 42
+
+# ---------------------------------------------------------------------
+# Bases: papéis das colunas + limpezas específicas de cada base
+# ---------------------------------------------------------------------
+datasets:
+
+  heart:
+    arquivo: datasets/heart/heart_failure.parquet
+    alvo: HeartDisease
+    numericas:   [Age, RestingBP, Cholesterol, MaxHR, Oldpeak]
+    categoricas: [Sex, ChestPainType, RestingECG, ExerciseAngina, ST_Slope, FastingBS]
+    descartar:   []
+    # valores presentes que na verdade representam AUSÊNCIA (0 fisiologicamente impossível)
+    valores_como_ausentes:
+      Cholesterol: [0]
+      RestingBP:   [0]
+    conversoes: {}
+    amostragem:
+      metodo: nenhuma
+
+  fraude:
+    arquivo: datasets/ibm_fraud/credit_card_transactions-ibm_v2.parquet
+    alvo: "Is Fraud?"
+    numericas:   [Amount]
+    categoricas: ["Use Chip", "Merchant State", MCC, Year, Month]
+    # IDs de altíssima cardinalidade e coluna quase toda ausente (Errors? = 98%) -> descartadas
+    descartar:   [User, Card, "Merchant Name", "Merchant City", Zip, Day, Time, "Errors?"]
+    valores_como_ausentes: {}
+    conversoes:
+      Amount: monetario_para_float     # "$134.09" -> 134.09
+    # base gigante e MUITO desbalanceada (0,12% fraude) -> undersampling da classe majoritária
+    amostragem:
+      metodo: undersample
+      ratio_neg_por_pos: 5             # 5 não-fraudes para cada fraude
+      random_state: 42
+
+# ---------------------------------------------------------------------
+# Perfis de pré-processamento — UM POR ALGORITMO (propositalmente diferentes)
+# ---------------------------------------------------------------------
+perfis:
+
+  knn:
+    descricao: >
+      KNN é baseado em DISTÂNCIA: exige todas as features na mesma escala
+      (z-score) e one-hot nos categóricos (ordinal criaria uma ordem artificial
+      que distorceria as distâncias).
+    ausentes:
+      numericos: mediana
+      categoricos: moda
+      constante_num: 0
+      constante_cat: DESCONHECIDO
+      descartar_coluna_acima_de: 0.5   # descarta coluna com >50% de ausentes
+    normalizacao: zscore
+    encoding: onehot
+
+  arvore:
+    descricao: >
+      Árvore de Decisão é INVARIANTE À ESCALA: não precisa de normalização.
+      Ordinal encoding basta (a árvore particiona por limiares) e evita explodir
+      a dimensionalidade com one-hot.
+    ausentes:
+      numericos: mediana
+      categoricos: moda
+      constante_num: 0
+      constante_cat: DESCONHECIDO
+      descartar_coluna_acima_de: 0.5
+    normalizacao: nenhuma
+    encoding: ordinal
+
+  mlp:
+    descricao: >
+      MLP (rede neural) é treinada por GRADIENTE e muito sensível à escala:
+      z-score é essencial para a convergência. One-hot nos categóricos.
+    ausentes:
+      numericos: mediana
+      categoricos: moda
+      constante_num: 0
+      constante_cat: DESCONHECIDO
+      descartar_coluna_acima_de: 0.5
+    normalizacao: zscore
+    encoding: onehot
